@@ -1,0 +1,328 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--get fully amped with components-->
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+    <title>Hello, AMPs</title>
+
+    <link rel="canonical" href="https://segment.com/docs/sources/mobile/amp/"/>
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }</style>
+    <noscript>
+        <style amp-boilerplate>body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none
+        }</style>
+    </noscript>
+
+    <!--Custom CSS-->
+    <style amp-custom>
+        /* any custom style goes here */
+        body {
+            background-color: #FBFAF9;
+            color: #00386C;
+            font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+            padding-top: 1em;
+            font-size: 1.2em;
+        }
+
+        h2 {
+            font-size: 2.0em;
+        }
+        h3 {
+            font-size: 1.8em;
+        }
+
+        .main {
+            margin: auto 5vw;
+        }
+
+        amp-img {
+            background-color: #49B882;
+            layout: "responsive";
+        }
+
+        a {
+            color: #49B882;
+        }
+
+        code {
+            font-family: monospace, monospace; /* 1 */
+            font-size: 1em; /* 2 */
+        }
+    </style>
+
+</head>
+<body>
+<div class="main">
+    <amp-img src="https://cdn.brandisty.com/img?id=578529f76b49441340000008&format=jpg&w=600&h=129" alt="segment-logo" height="65" width="300">
+    </amp-img><h2>⚡ Analytics for AMP ⚡</h2>
+    <p>
+        The <a href="https://www.ampproject.org/docs/reference/components/amp-analytics#segment" target="_blank">Segment &lt;amp-analytics> component</a> is an easy way to send your data to lots of tools without having to learn, test or implement
+        a new AMP component every time.<br/>
+        The component automatically collects default properties and sends a page view.
+    </p>
+
+    <p style="font-weight:600">Top note! It's a good idea to create a new Segment Source for <a href="https://www.ampproject.org/" target="_blank">AMPs</a>; choose a <span style="font-size:1.7em">Server or Legacy</span> type!</p>
+    <p>Data will be sent from your <a href="https://www.ampproject.org/" target="_blank">AMP</a> to Segment and fanned to all enabled end-tools, server to server!</p>
+
+    <h3>
+        Getting Started
+    </h3>
+    <p>
+        If you’re new to <a href="https://www.ampproject.org/" target="_blank">AMP</a>, go through the excellent <a
+            href="https://www.ampproject.org/docs/get_started/create_page.html" target="_blank">Quickstart Guide</a>.
+    </p>
+    <p>
+        Once you have an AMP up and running, include the <a href="https://www.ampproject.org/docs/reference/components/amp-analytics" target="_blank">amp-analytics component</a> before closing &lt;/head>:
+    </p>
+    <code>&lt;script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js">&lt;/script></code>
+    <p>
+        Include Segment analytics, using &lt;amp-analytics type="segment"?> as follows will automatically collect Page views:
+    </p>
+
+    <pre>
+    <code style="text-align: left">
+    &lt;amp-analytics type="segment">
+        &lt;script type="application/json">
+          {
+            "vars": {
+                "writeKey": "WRITE_KEY",
+                "name": "My Page Name"
+            }
+          }
+        &lt;/script>
+    &lt;/amp-analytics>
+    </code>
+    </pre>
+
+    <h3>
+        Default Properties Collected
+    </h3>
+    <p>
+        A few properties are automatically collected with each page view and event call.
+    </p>
+    <pre>
+    <code class="lang-js">
+    {
+        "anonymousId": "amp-&lt;UNIQUE_ID>",
+        "context.locale": "en-US",
+        "context.page.path": "/article",
+        "context.page.url": "http://example.com/article",
+        "context.page.referrer": "referrer",
+        "context.page.title": "My Article",
+        "context.screen.width": 600,
+        "context.screen.height": 800
+    }
+    </code>
+    </pre>
+    <h3>
+        Page
+    </h3>
+    <p>
+        Segment AMP component will track pageviews automatically once it is included in the body tag. <br/>
+        To collect additional, custom properties, include an "extraUrlParams" object like so:
+    </p>
+    <pre>
+    <code>
+    &lt;amp-analytics type="segment">
+        &lt;script type="application/json">
+          {
+            "vars": {
+              "writeKey": "WRITE_KEY",
+              "name": "my page name"
+            },
+            "extraUrlParams": {
+              "properties.type": "article",
+              "properties.published_at": "2016-06-28",
+              "properties.author": "John Doe"
+            }
+          }
+          &lt;/script>
+     &lt;/amp-analytics>
+    </code>
+    </pre>
+
+    <h3>
+        Events
+    </h3>
+    <p>
+        To track click events, add a simple trigger with a selector which will send that event once the user clicks:
+    </p>
+    <pre>
+    <code class="lang-js">
+    &lt;amp-analytics type="segment">
+        &lt;script type="application/json">
+          {
+            "vars": {
+              "writeKey": "WRITE_KEY"
+            }
+            "triggers": {
+              "click": {
+                "on": "click",
+                "selector": ".read-more-button",
+                "request": "track",
+                "vars": {
+                  "event": "Read More Clicked"
+                }
+              }
+            }
+          }
+        &lt;/script>
+    &lt;/amp-analytics>
+    </code>
+    </pre>
+    <p>
+        To collect additional, custom properties, include an "extraUrlParams" object like so:
+    </p>
+    <pre>
+    <code class="lang-js">
+    &lt;amp-analytics type="segment">
+    &lt;script type="application/json">
+      {
+        "vars": {
+          "writeKey": "WRITE_KEY"
+        },
+        "extraUrlParams": {
+          "properties.button_type": "read-more",
+          "properties.article_id": "my-article-id"
+        },
+        "triggers": {
+          "click": {
+            "on": "click",
+            "selector": ".read-more-button",
+            "request": "track",
+            "vars": {
+              "event": "Read More Clicked"
+            }
+          }
+        }
+      }
+    &lt;/script>
+    &lt;/amp-analytics>
+    </code>
+    </pre>
+    
+    <p>If this isn't working for ya, <a href=""></a> <a href="https://segment.com/contact" target="_blank">contact your friends on the
+        Success team</a></p>
+    <h3>Segment Success Team c. Fall '16</h3>
+    <amp-img name="segment-success" src="success.gif" alt="Segment Success" height="400" width="532"></amp-img>
+    <p>we party with sloths!</p>
+</div>
+
+<amp-analytics type="segment">
+    <script type="application/json">
+        {
+            "vars": {
+                "writeKey": "5Agnj191Nm77MIAgYdHL7mXUgdcrBBdp",
+                "name": "Analytics for AMP"
+            }
+        }
+    </script>
+</amp-analytics>
+</body>
+</html>
