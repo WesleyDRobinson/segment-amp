@@ -24,69 +24,22 @@
       }
 
     </script>
-    <style amp-boilerplate>
-        body {
-            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
-            animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
-
-        @-webkit-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @-moz-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @-ms-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @-o-keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }
-
-        @keyframes -amp-start {
-            from {
-                visibility: hidden
-            }
-            to {
-                visibility: visible
-            }
-        }</style>
-    <noscript>
-        <style amp-boilerplate>body {
-            -webkit-animation: none;
-            -moz-animation: none;
-            -ms-animation: none;
-            animation: none
-        }</style>
-    </noscript>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <!--Custom CSS-->
     <style amp-custom>
         /* any custom style goes here */
+        .top-note {
+            font-weight: 600;
+        }
+
+        .fs-1-7em {
+            font-size: 1.7em;
+        }
+
+        .tl {
+            text-align: left;
+        }
+
         body {
             background-color: #FBFAF9;
             color: #00386C;
@@ -136,8 +89,8 @@
         The component automatically collects default properties and sends a page view.
     </p>
 
-    <p style="font-weight:600">Top note! It's a good idea to create a new Segment Source for <a
-            href="https://www.ampproject.org/" target="_blank">AMPs</a>; choose a <span style="font-size:1.7em">Server or Legacy</span>
+    <p class="top-note">Top note! It's a good idea to create a new Segment Source for <a
+            href="https://www.ampproject.org/" target="_blank">AMPs</a>; choose a <span class="fs-1-7em">Server or Legacy</span>
         type!</p>
     <p>Data will be sent from your <a href="https://www.ampproject.org/" target="_blank">AMP</a> to Segment and fanned
         to all enabled end-tools, server to server!</p>
@@ -161,7 +114,7 @@
     </p>
 
     <pre>
-    <code style="text-align: left">
+    <code class="tl">
     &lt;amp-analytics type="segment">
         &lt;script type="application/json">
           {
@@ -283,7 +236,7 @@
     <p>If this isn't working for ya, <a href="https://segment.com/contact" target="_blank">contact your friends on the
         Success team</a></p>
     <h3>Segment Success Team c. Fall '16</h3>
-    <amp-img name="segment-success" src="assets/success.gif" alt="Segment Success" height="400" width="532"></amp-img>
+    <amp-img src="assets/success.gif" alt="Segment Success" height="400" width="532"></amp-img>
     <div>
         <a href="https://www.instagram.com/thenameis_flash/" target="_blank">We party with Flash!</a>
     </div>
